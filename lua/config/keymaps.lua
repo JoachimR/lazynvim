@@ -11,5 +11,5 @@ vim.api.nvim_set_keymap(
   "v",
   "<leader>rr",
   ":lua require('refactoring').select_refactor()<CR>",
-  { noremap = true, silent = true, expr = false }
+  { noremap = true, silent = true, expr = false, desc = "Select refactoring" }
 )
