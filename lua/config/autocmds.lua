@@ -19,3 +19,8 @@ require("lspconfig").eslint.setup({
     })
   end,
 })
+
+-- volar take over mode
+require("lspconfig").volar.setup({
+  filetypes = { "vue" },
+})
