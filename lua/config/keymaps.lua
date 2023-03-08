@@ -2,6 +2,10 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- source nvim config
+vim.keymap.set("n", "<leader>pp", ":source $MYVIMRC<CR>", { noremap = true })
+
+-- navigate in insert mode
 vim.keymap.set("i", "jj", "<Esc>", { noremap = true })
 vim.keymap.set("i", "kk", "<Esc>", { noremap = true })
 vim.keymap.set("i", "bb", "<Esc>", { noremap = true })
@@ -40,3 +44,7 @@ require("lspconfig")["tsserver"].setup({
     debounce_text_changes = 150,
   },
 })
+
+-- run tests with nvim-test
+vim.keymap.set("n", "<F4>", ":w<CR>:TestNearest<CR>", { noremap = true, desc = "Test nearest" })
+vim.keymap.set("n", "<F5>", ":w<CR>:TestFile<CR>", { noremap = true, desc = "Test file" })
