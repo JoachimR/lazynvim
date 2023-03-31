@@ -1,7 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
-
 -- source nvim config
 vim.keymap.set("n", "<leader>pp", ":source $MYVIMRC<CR>", { noremap = true })
 
@@ -46,5 +42,18 @@ require("lspconfig")["tsserver"].setup({
 })
 
 -- run tests with nvim-test
-vim.keymap.set("n", "<F4>", ":w<CR>:TestNearest<CR>", { noremap = true, desc = "Test nearest" })
-vim.keymap.set("n", "<F5>", ":w<CR>:TestFile<CR>", { noremap = true, desc = "Test file" })
+vim.keymap.set("n", "<F4>", ":w<CR>:TestNearest<CR>", { silent = true, noremap = true, desc = "Test nearest" })
+vim.keymap.set("n", "<F5>", ":w<CR>:TestFile<CR>", { silent = true, noremap = true, desc = "Test file" })
+vim.keymap.set("n", "<F6>", ":w<CR>:TestLast<CR>", { silent = true, noremap = true, desc = "Test last" })
+vim.keymap.set("n", "<leader>oo", ":w<CR>:TestFile<CR>", { silent = true, noremap = true, desc = "Test file" })
+
+-- paste+replace without losing yanked text
+vim.keymap.set("v", "p", '"_dP', { silent = true, noremap = true })
+
+-- shortcut screen.debug()
+vim.keymap.set(
+  "n",
+  "<leader>dd",
+  "iscreen.debug(undefined, 99999)<Esc>",
+  { silent = true, noremap = true, desc = "screen.debug()" }
+)
