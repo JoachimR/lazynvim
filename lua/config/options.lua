@@ -11,8 +11,8 @@ vim.opt.wrap = true
 vim.g.nord_disable_background = true
 
 -- diable line numbers
-vim.opt.number = false
+vim.opt.number = true
 vim.opt.relativenumber = false
 
 -- enable or disable codeium
-vim.g.codeium_enabled = true
+vim.g.codeium_enabled = false

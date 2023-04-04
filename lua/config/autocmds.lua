@@ -90,11 +90,11 @@ require("nvim-test.runners.jest"):setup({
 -- })
 
 -- atom one theme
-require("onedark").load()
-require("lualine").setup({
-  options = {
-    theme = "onedark",
-  },
-})
+-- require("onedark").load()
+-- require("lualine").setup({
+--   options = {
+--     theme = "onedark",
+--   },
+-- })
 
 require("typescript").setup({})
