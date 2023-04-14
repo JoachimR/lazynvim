@@ -9,10 +9,13 @@ return {
   -- { "NLKNguyen/papercolor-theme" },
   -- -- { "EdenEast/nightfox.nvim" },
   { "catppuccin/nvim", name = "catppuccin" },
+  { "rose-pine/neovim", name = "rose-pine" },
+  { "embark-theme/vim", name = "embark" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-macchiato",
+      -- colorscheme = "catppuccin-mocha",
+      colorscheme = "embark",
     },
   },
 }

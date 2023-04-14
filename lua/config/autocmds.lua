@@ -66,7 +66,7 @@ require("nvim-test").setup({
 -- require("nvim-test.runners.jest"):setup({
 --   command = FindNearestNodeModules() .. "/.bin/jest", -- "pnpm jest", -- a command to run the test runner
 require("nvim-test.runners.jest"):setup({
-  command = "pnpm jest", -- a command to run the test runner
+  -- command = "pnpm jest", -- a command to run the test runner
 
   file_pattern = "\\v(__tests__/.*|(spec|test))\\.(js|jsx|coffee|ts|tsx)$", -- determine whether a file is a testfile
   find_files = { "{name}.test.{ext}", "{name}.spec.{ext}" }, -- find testfile for a file
@@ -96,5 +96,3 @@ require("nvim-test.runners.jest"):setup({
 --     theme = "onedark",
 --   },
 -- })
-
-require("typescript").setup({})

@@ -15,4 +15,4 @@ vim.opt.number = true
 vim.opt.relativenumber = false
 
 -- enable or disable codeium
-vim.g.codeium_enabled = false
+vim.g.codeium_enabled = true
